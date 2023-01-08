@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "dce320aee5e5fbea",
+    "type": "split",
+    "children": [
+      {
+        "id": "18d3b9784532fa6a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "068150aa4d95500a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "df9e28bd6e975e8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "c751e8856dd6ce0a",
+        "type": "tabs",
+        "dimension": 57.59615384615384,
+        "children": [
+          {
+            "id": "78d0c2122a8c3476",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7be8cfd92961480b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2d3a5c9ba76cf673",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "76e03f1dd5e2c0ef",
+        "type": "tabs",
+        "dimension": 42.40384615384615,
+        "children": [
+          {
+            "id": "726ba8b365f52049",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c216014fdfcd24b0",
+    "type": "split",
+    "children": [
+      {
+        "id": "a64e6094509b94c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f39422e5e375720d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "2cccda8d383d2e82",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0fcb2e871a151ed2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d01cc117e0d62e15",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir quick switcher": false,
+      "graph:Abrir vista de gráfico": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "068150aa4d95500a",
+  "lastOpenFiles": [
+    "2023-01-08.md",
+    "Untitled.canvas",
+    "RTC_HAL.md",
+    "STM32F103_LL.md",
+    "ADC_LL.md",
+    "CRC_LL.md",
+    "DMA_LL.md",
+    "EXTI_LL.md",
+    "GPIO_LL.md",
+    "I2C_LL.md"
+  ]
+}
