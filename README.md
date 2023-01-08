@@ -14,5 +14,9 @@ En la carpeta [STM32 Blue Pill](STM32_bluepill) existen 2 carpetas una llamada [
 
 ![](temas_stm.jpeg)
 
+## Base de conocimiento
+
+Pueden alimentar la [wiki STM32](https://github.com/Open-Hardware-Latinoamerica/STM32F1/wiki) o informarse sobre los aportes que hacen los demas
+
 
 Los colaboradores tendran mension honorifica en la web de [open Harware Latinoamerica](https://openhardwarela.com/)
