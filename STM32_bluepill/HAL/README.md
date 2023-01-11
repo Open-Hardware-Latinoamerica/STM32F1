@@ -1,1 +1,0 @@
-# Colocar aqui todos los ejemplos relacionados a HAL
