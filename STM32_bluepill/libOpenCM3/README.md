@@ -40,7 +40,8 @@ Con el siguiente paso a paso puede generar un proyecto vacío para empezar a des
 
 3. Esto genera una estructura básica de proyecto. En la carpeta `src` debe agregar sus archivos `.c` o `.cpp` respectivamente:
 
-![Estructura de un proyexto nuevo](img/estructura.png)![Crear un nuevo archivo en la carpeta "src"](img/new-file.png)![main.c](img/main.png)
+![Estructura de un proyexto nuevo](img/estructura.png)
+![Crear un nuevo archivo en la carpeta "src"](img/new-file.png)![main.c](img/main.png)
 
 4. Ya puede empezar a codificar cualquiera de los ejemplos propuestos.
 
@@ -48,4 +49,49 @@ Con el siguiente paso a paso puede generar un proyecto vacío para empezar a des
 
 Para compilar o grabar, puede utilizar la barra inferior donde tiene las tareas correspondientes:
 
-![](img/toolbar.png)
+![Toolbar compilar y grabar](img/toolbar.png)
+
+Por defualt se utilizará el `ST-LinkV2` como herramienta de carga de firmware y debuggin. Si necesita utilizar otras herramientas puede optar por alguna de las correspondientes en el archivo `platformio.ini`:
+
+```ini
+; Para Blackmagic:
+upload_protocol = blackmagic
+
+; Para grabar por USART1 => PA9-PA10 (BOOT0=1, BOOT1=0)
+upload_protocol = serial
+
+; Para dap boot por medio del USB (BOOT0=0, BOOT1=1)
+upload_protocol = dfu
+upload_command = $PROJECT_PACKAGES_DIR/tool-dfuutil/bin/dfu-util -D $SOURCE
+```
+
+#### Referencias
+
+* [Black Magic Probe](https://black-magic.org/)
+* [dapboot](https://github.com/devanlai/dapboot)
+
+## Troubleshooting
+
+### Chip con firma diferente
+
+Si posee un chip clon (CKS32/CS32) con firma ID `0x2ba01477` puede agregar lo siguiente al `platformio.ini`:
+
+```ini
+upload_flags = -c set CPUTAPID 0x2ba01477
+```
+
+### Agregar `.rules` en GNU/Linux
+
+En linux debe agregar un archivo para que el sistema reconozca los dispositivos usb para grabar y depurar, según la [documentación de PlatformIO](https://docs.platformio.org/en/stable/core/installation/udev-rules.html) puede hacerlo de la siguiente manera:
+
+```bash
+curl ‐fsSL https://raw.githubusercontent.com/platformio/platformio‐core/master/scripts/99‐
+platformio‐udev.rules | sudo tee /etc/udev/rules.d/99‐platformio‐udev.rules
+```
+
+Como el `dapboot` no está soportado oficialmente, podría necesitar una regla especial para este `99-dapboot.rules`:
+
+```bash
+ATTRS{idVendor}=="1209", ATTRS{idProduct}=="db42", MODE:="0666", ENV{ID_MM_DEVICE_IGNORE}=
+"1", ENV{ID_MM_PORT_IGNORE}="1"
+```
